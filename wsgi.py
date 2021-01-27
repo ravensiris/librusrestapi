@@ -6,9 +6,17 @@ from api import api_blueprint
 from flask_talisman import Talisman
 from flask_cors import CORS
 
-app = Flask(__name__, static_url_path = "")
+app = Flask(__name__, static_url_path="")
 
-Talisman(app)
+Talisman(
+    app,
+    content_security_policy={
+        "style-src": [
+            "'unsafe-inline'",
+            "'self'",
+        ]
+    },
+)
 CORS(app)
 
 app.config["RESTX_MASK_SWAGGER"] = False
