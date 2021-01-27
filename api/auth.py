@@ -1,4 +1,4 @@
-from flask_restplus import Namespace, fields, Resource
+from flask_restx import Namespace, fields, Resource
 from flask import request
 from librusapi.token import get_token
 from librusapi.exceptions import AuthorizationError

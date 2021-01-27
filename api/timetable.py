@@ -1,4 +1,4 @@
-from flask_restplus import Namespace, fields, Resource
+from flask_restx import Namespace, fields, Resource
 from flask import request
 from librusapi.timetable import lesson_units, LessonUnit
 from typing import Dict, Any

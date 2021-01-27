@@ -1,4 +1,4 @@
-from flask_restplus import Api
+from flask_restx import Api
 from flask import Blueprint
 from api.auth import api as auth_api
 from api.timetable import api as timetable_api

@@ -1,7 +1,7 @@
 from enum import EnumMeta
 from typing import Any, Dict, cast, Literal
 from dataclasses import dataclass
-from flask_restplus import Model, fields
+from flask_restx import Model, fields
 
 
 class Status(EnumMeta):
