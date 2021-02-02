@@ -42,23 +42,23 @@ class StatusField(fields.Raw):
 
 def data_wrap(api, fieldname, **data: fields.Raw):
     field = api.model(fieldname + "Field", data)
-    return dict(data=fields.Nested(field))
+    return dict(data=fields.Nested(field, required=True))
 
 DefaultModel = Model(
     "DefaultModel",
     dict(
-        status=StatusField(),
+        status=StatusField(required=True),
         data=fields.Raw(),
         message=fields.String()
     )
 )
 
-SuccessModel = Model("SuccessModel", dict(status=StatusField(default=Status.SUCCESS), data=fields.Raw()))
+SuccessModel = Model("SuccessModel", dict(status=StatusField(default=Status.SUCCESS, required=True), data=fields.Raw(required=True)))
 
 ErrorModel = Model(
     "ErrorModel",
     dict(
-        status=StatusField(default=Status.ERROR, example=Status.ERROR),
-        message=fields.String,
+        status=StatusField(default=Status.ERROR, example=Status.ERROR, required=True),
+        message=fields.String(required=True),
     ),
 )
