@@ -1,0 +1,19 @@
+* Table of contents                                                     :TOC:
+- [[#librusrestapi---an-open-source-rest-api-for-librus-synergia][librusrestapi - An open source REST API for Librus Synergia]]
+- [[#tech-used][Tech used]]
+
+* librusrestapi - An open source REST API for Librus Synergia
+
+[[https://librelibrus.herokuapp.com/api/][Swagger documentation here!]]
+
+Goal of this project is to free students from the limitations of Librus Synergia software
+mainly: giving the user *fresh* information unlike their mobile app that can only
+refresh every *3h* or so.
+
+Check out my other project that was used here: [[https://github.com/ravensiris/librusapi][librusapi]]
+
+* Tech used
+
+- =Python 3.9= might work with 3.8, I only focus on Python >= 3.9 in this project
+- =flask=, =flask-restx= making development and documentation easy
+- =heroku= for fast deployment and its *free* /as in price/ service
