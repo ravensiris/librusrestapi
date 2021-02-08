@@ -15,7 +15,7 @@ TokenModel = api.inherit(
     data_wrap(
         api,
         "Token",
-        token=fields.String(example="L00-00000000000000000000000000000000", required=True),
+        token=fields.String(),
     ),
 )
 
@@ -34,7 +34,7 @@ class AuthorizeToken(Resource):
         auth = request.authorization
         if auth and auth.type == "basic":
             try:
-                token = get_token(auth.username, auth.password)
+                token = str(get_token(auth.username, auth.password))
                 return SuccessResponse(token=token), 200
             except AuthorizationError as e:
                 return ErrorResponse(str(e)), 401
