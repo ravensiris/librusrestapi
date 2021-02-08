@@ -15,7 +15,7 @@ TokenModel = api.inherit(
     data_wrap(
         api,
         "Token",
-        token=fields.String(),
+        token=fields.String(required=True),
     ),
 )
 
