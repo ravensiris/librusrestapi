@@ -45,8 +45,8 @@ ListMessagesModel = api.inherit(
     data_wrap(
         api,
         "ListMessagesData",
-        messages=fields.List(fields.Nested(MessageBriefModel)),
-        pageInfo=fields.Nested(PageInfoModel)
+        messages=fields.List(fields.Nested(MessageBriefModel, required=True), required=True),
+        pageInfo=fields.Nested(PageInfoModel, required=True)
     ),
 )
 
