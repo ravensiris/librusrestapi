@@ -55,8 +55,8 @@ ListMessagesFailModel = api.model(
     data_wrap(
         api,
         "ListMessagesFail",
-        token=fields.String(example="malformed token", required=True),
-        page=fields.Integer(example="page out of bounds", required=True),
+        token=fields.String(example="malformed token"),
+        page=fields.Integer(example="page out of bounds"),
     ),
 )
 
