@@ -70,7 +70,7 @@ def serialize_msg_brief(message: MessageBrief):
 @api.route("/units/<int:page>")
 @api.doc(security="apikey")
 @api.header("X-API-KEY", "token", required=True)
-class LessonUnits(Resource):
+class ListMessages(Resource):
     @api.response(200, "Success", ListMessagesModel)
     @api.response(403, "Token invalid", ErrorModel)
     @api.response(401, "Unauthorized", ErrorModel)
